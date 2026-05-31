@@ -31,11 +31,9 @@
     "@radix-ui/react-scroll-area": "^1.1.0",
     "@radix-ui/react-select": "^2.1.1",
     "@radix-ui/react-separator": "^1.1.0",
-    "@radix-ui/react-slider": "^1.2.0",
     "@radix-ui/react-slot": "^1.1.0",
     "@radix-ui/react-switch": "^1.1.0",
     "@radix-ui/react-tabs": "^1.1.0",
-    "@radix-ui/react-toast": "^1.2.1",
     "@radix-ui/react-toggle": "^1.1.0",
     "@radix-ui/react-toggle-group": "^1.1.0",
     "@radix-ui/react-tooltip": "^1.1.4",
@@ -62,7 +60,7 @@
     "zod": "^3.25.0",
     "express": "^4.21.0",
     "cors": "^2.8.6",
-    "sqlite3": "^5.2.0",
+    "sqlite3": "^6.0.1",
     "typescript": "^5.5.3"
   },
   "devDependencies": {
@@ -80,7 +78,6 @@
     "globals": "^15.9.0",
     "postcss": "^8.4.47",
     "tailwindcss": "^3.4.11",
-    "typescript": "^5.5.3",
     "typescript-eslint": "^8.0.1",
     "vite": "^8.0.0"
   }
