@@ -8,7 +8,8 @@
     "build": "vite build",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "server": "node backend/index.js"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
@@ -48,7 +49,6 @@
     "input-otp": "^1.2.4",
     "lucide-react": "^0.462.0",
     "next-themes": "^0.3.0",
-    "nitro": "^3.0.260429-beta",
     "react": "^19.2.3",
     "react-day-picker": "^9.13.0",
     "react-dom": "^19.2.3",
@@ -60,7 +60,10 @@
     "tailwind-merge": "^2.5.2",
     "tailwindcss-animate": "^1.0.7",
     "vaul": "^0.9.3",
-    "zod": "^3.25.0"
+    "zod": "^3.25.0",
+    "express": "^4.21.0",
+    "cors": "^2.9.0",
+    "sqlite3": "^5.1.7"
   },
   "devDependencies": {
     "@dyad-sh/react-vite-component-tagger": "^0.9.0",
