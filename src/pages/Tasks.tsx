@@ -6,7 +6,6 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Badge } from "@/components/ui/badge";
-import { toast } from "sonner";
 import { useTasks, Task } from "@/hooks/useTasks";
 
 export default function Tasks() {
@@ -23,26 +22,26 @@ export default function Tasks() {
 
   const handleAdd = () => {
     if (!newTitle.trim()) {
-      toast.error("O título não pode ser vazio");
+      alert("O título não pode ser vazio");
       return;
     }
     addTask(newTitle.trim());
     setNewTitle("");
-    toast.success("Tarefa criada");
+    alert("Tarefa criada");
   };
 
   const handleEdit = (task: Task) => {
     const newT = prompt("Editar título", task.title);
     if (newT !== null && newT.trim() !== "") {
       updateTask({ ...task, title: newT.trim() });
-      toast.success("Tarefa atualizada");
+      alert("Tarefa atualizada");
     }
   };
 
   const handleDelete = (id: number) => {
     if (confirm("Tem certeza que deseja excluir esta tarefa?")) {
       deleteTask(id);
-      toast.success("Tarefa excluída");
+      alert("Tarefa excluída");
     }
   };
 
@@ -76,15 +75,16 @@ export default function Tasks() {
       {/* Task list */}
       <div className="grid gap-4">
         {tasks.map((task) => (
-          <Card key={task.id} className="p-4 flex items-center justify-between">
+          <Card
+            key={task.id}
+            className="p-4 flex items-center justify-between"
+          >
             <div className="flex items-center gap-2">
               <Checkbox
                 checked={task.completed}
                 onCheckedChange={() => toggleComplete(task.id)}
               />
-              <span
-                className={task.completed ? "line-through text-gray-500" : ""}
-              >
+              <span className={task.completed ? "line-through text-gray-500" : ""}>
                 {task.title}
               </span>
             </div>
